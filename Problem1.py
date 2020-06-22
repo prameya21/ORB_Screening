@@ -1,6 +1,7 @@
 import re
 
 def clean_names(rawData):
+    '''Parse a list and split on a regex for dba and make a tuple out of left subset and right subset'''
     ret=[]
     pattern='d+\W*b+\W*a\W'
     for data in rawData:
@@ -17,6 +18,7 @@ def clean_names(rawData):
 
 
 def parse(data):
+    '''Parse the string and clean upleft side, right side and replace _ in the middle'''
     result=[]
     for d in data:
         pattern='\A\W*'
